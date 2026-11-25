@@ -31,7 +31,7 @@
 
 	function gameUrl(locale, v) {
 		var path = GAME_LANGS.indexOf(locale) >= 0 ? locale + '/' : '';
-		return GAME + path + '?' + (v === 'blend' ? 'play=solo&' : '') + 'utm_source=' + UTM_SOURCE +
+		return GAME + path + '?utm_source=' + UTM_SOURCE +
 			'&utm_medium=banner_' + v + '&utm_campaign=wtb_launch&utm_content=' + locale;
 	}
 
