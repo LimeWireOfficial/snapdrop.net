@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>!function(){var w=window;w.dataLayer=w.dataLayer||[];function g(){w.dataLayer.push(arguments)}var R=["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","IS","GB","CH"],Y={ad_storage:"granted",ad_user_data:"granted",ad_personalization:"granted",analytics_storage:"granted"};g("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",region:R,wait_for_update:2000});g("consent","default",Y);g("set","ads_data_redaction",!0);var t=Date.now();function v(x){return x?"granted":"denied"}function A(){if(typeof w.__tcfapi!=="function"){if(Date.now()-t<1e4)setTimeout(A,100);return}try{w.__tcfapi("addEventListener",2,function(d,ok){if(!ok||!d||(d.eventStatus!=="tcloaded"&&d.eventStatus!=="useractioncomplete"))return;if(d.gdprApplies===!1)return g("consent","update",Y);var c=d.purpose&&d.purpose.consent||{},s=!!c[1];g("consent","update",{ad_storage:v(s),ad_user_data:v(s&&c[7]),ad_personalization:v(s&&c[3]&&c[4]),analytics_storage:v(s&&(c[8]||c[9]))})})}catch(e){}}A()}();
+!function(){var R=["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","IS","GB","CH"];function L(){var e=window.location.hostname.replace(/^www\./,""),t=document.createElement("script"),n=document.getElementsByTagName("script")[0],a="https://cmp.inmobi.com".concat("/choice/","xU6SVDXWX-PW6","/",e,"/choice.js?tag_version=V3"),p=0;t.async=!0,t.type="text/javascript",t.src=a,n.parentNode.insertBefore(t,n),function(){for(var e,t="__tcfapiLocator",n=[],a=window;a;){try{if(a.frames[t]){e=a;break}}catch(e){}if(a===window.top)break;a=a.parent}e||(!function e(){var n=a.document,p=!!a.frames[t];if(!p)if(n.body){var s=n.createElement("iframe");s.style.cssText="display:none",s.name=t,n.body.appendChild(s)}else setTimeout(e,5);return!p}(),a.__tcfapi=function(){var e,t=arguments;if(!t.length)return n;if("setGdprApplies"===t[0])t.length>3&&2===t[2]&&"boolean"==typeof t[3]&&(e=t[3],"function"==typeof t[2]&&t[2]("set",!0));else if("ping"===t[0]){var a={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof t[2]&&t[2](a)}else"init"===t[0]&&"object"==typeof t[3]&&(t[3]=Object.assign(t[3],{tag_version:"V3"})),n.push(t)},a.addEventListener("message",(function(e){var t="string"==typeof e.data,n={};try{n=t?JSON.parse(e.data):e.data}catch(e){}var a=n.__tcfapiCall;a&&window.__tcfapi(a.command,a.version,(function(n,p){var s={__tcfapiReturn:{returnValue:n,success:p,callId:a.callId}};t&&(s=JSON.stringify(s)),e&&e.source&&e.source.postMessage&&e.source.postMessage(s,"*")}),a.parameter)}),!1))}(),function(){const e=["2:tcfeuv2","6:uspv1","7:usnatv1","8:usca","9:usvav1","10:uscov1","11:usutv1","12:usctv1"];window.__gpp_addFrame=function(e){if(!window.frames[e])if(document.body){var t=document.createElement("iframe");t.style.cssText="display:none",t.name=e,document.body.appendChild(t)}else window.setTimeout(window.__gpp_addFrame,10,e)},window.__gpp_stub=function(){var t=arguments;if(__gpp.queue=__gpp.queue||[],__gpp.events=__gpp.events||[],!t.length||1==t.length&&"queue"==t[0])return __gpp.queue;if(1==t.length&&"events"==t[0])return __gpp.events;var n=t[0],a=t.length>1?t[1]:null,p=t.length>2?t[2]:null;if("ping"===n)a({gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:e,cmpId:10,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{}},!0);else if("addEventListener"===n){"lastId"in __gpp||(__gpp.lastId=0),__gpp.lastId++;var s=__gpp.lastId;__gpp.events.push({id:s,callback:a,parameter:p}),a({eventName:"listenerRegistered",listenerId:s,data:!0,pingData:{gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:e,cmpId:10,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{}}},!0)}else if("removeEventListener"===n){for(var i=!1,o=0;o<__gpp.events.length;o++)if(__gpp.events[o].id==p){__gpp.events.splice(o,1),i=!0;break}a({eventName:"listenerRemoved",listenerId:p,data:i,pingData:{gppVersion:"1.1",cmpStatus:"stub",cmpDisplayStatus:"hidden",signalStatus:"not ready",supportedAPIs:e,cmpId:10,sectionList:[],applicableSections:[-1],gppString:"",parsedSections:{}}},!0)}else"hasSection"===n?a(!1,!0):"getSection"===n||"getField"===n?a(null,!0):__gpp.queue.push([].slice.apply(t))},window.__gpp_msghandler=function(e){var t="string"==typeof e.data;try{var n=t?JSON.parse(e.data):e.data}catch(e){n=null}if("object"==typeof n&&null!==n&&"__gppCall"in n){var a=n.__gppCall;window.__gpp(a.command,(function(n,p){var s={__gppReturn:{returnValue:n,success:p,callId:a.callId}};e.source.postMessage(t?JSON.stringify(s):s,"*")}),"parameter"in a?a.parameter:null,"version"in a?a.version:"1.1")}},"__gpp"in window&&"function"==typeof window.__gpp||(window.__gpp=window.__gpp_stub,window.addEventListener("message",window.__gpp_msghandler,!1),window.__gpp_addFrame("__gppLocator"))}();var s=function(){var e=arguments;typeof window.__uspapi!==s&&setTimeout((function(){void 0!==window.__uspapi&&window.__uspapi.apply(window.__uspapi,e)}),500)};if(void 0===window.__uspapi){window.__uspapi=s;var i=setInterval((function(){p++,window.__uspapi===s&&p<3?console.warn("USP is not accessible"):clearInterval(i)}),6e3)}}function T(t){var m=/\bloc=([A-Z]{2})/.exec(t||"");if(!m||R.indexOf(m[1])>-1)L()}try{if(!window.fetch)return L();fetch("/cdn-cgi/trace",{cache:"no-store"}).then(function(r){return r.ok?r.text():""}).then(T).catch(function(){L()})}catch(e){L()}}();</script>
+
+<meta charset="utf-8">
+<title>Snapdrop — Send Files Like AirDrop to Any Device, No App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#3367d6">
+<meta name="color-scheme" content="dark light">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-title" content="Snapdrop">
+
+<meta name="description" content="A free AirDrop alternative in the browser for iPhone, Android, Windows and Mac. Send a file from one device to another straight from the browser: devices on the same Wi-Fi find each other, others connect with a 6-digit code. Free, no app, no account, files never touch a server. Need a link instead? One click.">
+<meta property="og:title" content="Snapdrop">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://snapdrop.net/">
+<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Snapdrop">
+<meta name="twitter:description" content="A free AirDrop alternative in the browser for iPhone, Android, Windows and Mac. Send a file from one device to another straight from the browser: devices on the same Wi-Fi find each other, others connect with a 6-digit code. Free, no app, no account, files never touch a server. Need a link instead? One click.">
+
+<link rel="icon" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="shortcut icon" href="/images/favicon-96x96.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<meta name="msapplication-TileImage" content="/images/mstile-150x150.png">
+<link rel="fluid-icon" type="image/png" href="/images/android-chrome-192x192.png">
+<meta name="twitter:image" content="https://snapdrop.net/images/twitter-stream.jpg">
+<meta property="og:image" content="https://snapdrop.net/images/twitter-stream.jpg">
+<link rel="stylesheet" type="text/css" href="styles.css?v=7efa4545fa">
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=aa5b5a1f06">
+<link rel="stylesheet" href="/css/lw_p2p.css?v=fdb9480552">
+<link rel="stylesheet" href="/css/lw_skin.css?v=426d7c9329">
+<script>(function(){var d=document.documentElement,t=null;try{t=localStorage.getItem("lwTheme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.setAttribute("data-theme",t)})();</script>
+<script src="/js/lw_theme.js?v=ea6e53a0f0" defer></script>
+<script>
+
+(function(){var d=document.documentElement,q=location.search,o=null;try{o=localStorage.getItem("lwP2pFx")}catch(e){}
+if(/[?&]fx=0(&|$)/.test(q))o="0";if(/[?&]fx=1(&|$)/.test(q))o=null;if(o==="0")return;d.classList.add("lw-p2p-fx");
+addEventListener("load",function(){if(!window.lwP2p)d.classList.remove("lw-p2p-fx")})})();</script>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" type="text/css" href="/css/promo_banner.css?v=373e408f31">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT7HYZWBL7"></script> 
+<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-ZT7HYZWBL7');
+</script>
+
+<script src="/js/promo_banner.js?v=eedfe8ba52"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  (async () => {
+    try {
+      await Promise.all((await navigator.serviceWorker.getRegistrations()).map((registration) => registration.unregister()))
+    }
+    catch {}
+  })();
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://snapdrop.net/#organization",
+      "name": "Snapdrop",
+      "url": "https://snapdrop.net/",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q141970041"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://snapdrop.net/#website",
+      "name": "Snapdrop",
+      "url": "https://snapdrop.net/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://snapdrop.net/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://snapdrop.net/#app",
+      "name": "Snapdrop",
+      "url": "https://snapdrop.net/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
+      "description": "Snapdrop sends files directly from one browser to another. Devices on the same Wi-Fi see each other on the page; devices on different networks are linked once with a 6-digit code or a QR code. Files travel over an encrypted peer-to-peer connection and are not uploaded anywhere. When a direct connection is not possible, the same files can be shared as a LimeWire link, but only after the user chooses to.",
+      "featureList": [
+        "Direct device-to-device transfer in the browser, no app to install",
+        "Devices on the same Wi-Fi find each other automatically",
+        "Link a phone and a computer on different networks with a 6-digit code or a QR code",
+        "Direct transfers are not uploaded: an encrypted WebRTC connection between the two browsers",
+        "Drag and drop a file onto a device, or tap it and pick files",
+        "No account required on either device",
+        "Optional share link through LimeWire for people who are not nearby"
+      ],
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://snapdrop.net/#organization"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "LimeWire",
+        "url": "https://limewire.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://snapdrop.net/#offer-free",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+}
+</script>
+
+<meta property="og:site_name" content="Snapdrop">
+<meta property="og:description" content="A free AirDrop alternative in the browser for iPhone, Android, Windows and Mac. Send a file from one device to another straight from the browser: devices on the same Wi-Fi find each other, others connect with a 6-digit code. Free, no app, no account, files never touch a server. Need a link instead? One click.">
+<link rel="canonical" href="https://snapdrop.net/">
+
+<link rel="alternate" hreflang="x-default" href="https://snapdrop.net/">
+<link rel="alternate" hreflang="en" href="https://snapdrop.net/">
+<link rel="alternate" hreflang="ar" href="https://snapdrop.net/ar/">
+<link rel="alternate" hreflang="bn" href="https://snapdrop.net/bn/">
+<link rel="alternate" hreflang="de" href="https://snapdrop.net/de/">
+<link rel="alternate" hreflang="es" href="https://snapdrop.net/es/">
+<link rel="alternate" hreflang="fr" href="https://snapdrop.net/fr/">
+<link rel="alternate" hreflang="id" href="https://snapdrop.net/id/">
+<link rel="alternate" hreflang="it" href="https://snapdrop.net/it/">
+<link rel="alternate" hreflang="ja" href="https://snapdrop.net/ja/">
+<link rel="alternate" hreflang="pt" href="https://snapdrop.net/pt/">
+<link rel="alternate" hreflang="th" href="https://snapdrop.net/th/">
+<link rel="alternate" hreflang="tr" href="https://snapdrop.net/tr/">
+<link rel="alternate" hreflang="vi" href="https://snapdrop.net/vi/">
+<link rel="alternate" hreflang="zh" href="https://snapdrop.net/zh/">
+
+<script src="/js/lw_origin.js?v=8d4cea19b3" defer></script>
+</head>
+
+<body id="upload-drag-drop" class="lw_promo_fixed">
+<div class="lw-fall" aria-hidden="true"><i class="f-txt"></i><i class="f-zip"></i><i class="f-jpg"></i><i class="f-mp3"></i><i class="f-mp4"></i><i class="f-doc"></i><i class="f-pdf"></i><i class="f-pdf lw-fall-b"></i><i class="f-doc lw-fall-b"></i><i class="f-mp4 lw-fall-b"></i><i class="f-mp3 lw-fall-b"></i><i class="f-jpg lw-fall-b"></i><i class="f-zip lw-fall-b"></i><i class="f-txt lw-fall-b"></i></div>
+
+<div class="lw_modal" style="display: none;">
+  <div class="lw_modal_container">
+    <div class="lw_modal_header">
+      <div class="lw_logo"></div>
+    </div>
+    <div class="lw_modal_files">
+      <div class="lw_modal_files_heading"> </div>
+      <div class="lw_modal_files_container"> 
+        
+      </div>
+    </div>
+    <div class="lw_modal_footer">
+      <div class="lw_loading_spinner"></div>
+      <div class="lw_redirect_dialog">You're almost done! <br>
+        <span>Uploading your files ...</span></div>
+    </div>
+  </div>
+</div>
+ 
+<script src="/js/jquery-3.7.1.min.js?v=fc9a93dd24"></script> 
+<script src="/js/lw_upload.js?v=8bb20522a2" type="module"></script> 
+<script src="/js/scripts.js?v=ea0acbe3e2" type="module"></script>
+<script src="/js/lw_p2p.js?v=f46609b0b9" type="module"></script>
+<header class="row-reverse"> 
+	
+	<div class="lw-lp-slot" data-lw-lang-slot></div>
+	<button type="button" class="lw-theme" data-lw-theme aria-pressed="false" aria-label="Dark mode" title="Dark mode"><svg class="lw-theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="lw-theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+  <a href="#" id="notification" class="icon-button" title="Enable Notifications" hidden>
+  <svg class="icon">
+    <use xlink:href="#notifications" />
+  </svg>
+  </a> <a href="#" id="install" class="icon-button" title="Install Snapdrop" hidden>
+  <svg class="icon">
+    <use xlink:href="#homescreen" />
+  </svg>
+  </a> 
+	
+	<div class="logo">
+		<img draggable="false" alt="Snapdrop Logo" src="/img/snapdrop_by_lw.svg">
+	</div>
+	
+	</header>
+
+
+
+	<div class="main_content">
+		
+		<input type="file" id="select-files-input" multiple>
+		<input type="file" id="upload-folder" webkitdirectory directory multiple>
+
+		
+
+       <label class="upload_main" for="select-files-input">
+		   <span class="um_label"><span>Share a Link</span><span class="click_here">Upload files</span></span>
+          <span class="um_lines um_line1"><span class="um_line11 um_line111 um_line1111"></span></span>
+       </label>
+
+       <label class="or_upload_folder" for="upload-folder">Upload Folder</label>
+
+	</div>
+
+
+
+
+
+
+
+
+<footer class="column">
+  <svg class="icon logo">
+    <use xlink:href="#wifi-tethering" />
+  </svg>
+  <div class="font-body2 lw-foot-about">Send files to nearby devices directly, or <b>upload and share a link</b>.</div>
+  <div class="font-body2"><a class="blog-link" href="/blog/">Read the blog</a></div>
+  <div class="font-body2"><a class="blog-link" href="/write-for-us">Write for Us</a></div>
+  <div class="font-body2"><a class="blog-link" href="https://limewire.com/pricing?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=pricing&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">LimeWire Pricing</a></div>
+  <div class="font-body2 lw-foot-legal"><a class="blog-link" href="https://limewire.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> · <a class="blog-link" href="https://limewire.com/terms" target="_blank" rel="noopener">Terms of Use</a> · <a class="blog-link" href="https://limewire.com/dmca" target="_blank" rel="noopener">Report abuse</a> · <a class="blog-link" href="https://github.com/LimeWireOfficial/snapdrop.net" target="_blank" rel="noopener">Source code</a></div>
+</footer>
+
+
+<style>
+  body { overflow-y: visible; }
+  .lw-seo { position: absolute; top: 100vh; left: 0; right: 0;
+            background: var(--bg-color, #fafafa); color: #44403c;
+            padding: 2.5rem 1rem 3.5rem; }
+  .lw-seo-inner { max-width: 44rem; margin: 0 auto; font-size: 15px; line-height: 1.65; text-align: start; }
+  .lw-seo section { margin-bottom: 2.25rem; }
+  .lw-seo h2 { font-size: 1.3rem; font-weight: 700; color: #1a1a1a; margin: 0 0 .6rem; line-height: 1.3; }
+  .lw-seo h3 { font-size: 1rem; font-weight: 600; color: #1a1a1a; margin: 1.15rem 0 .3rem; }
+  .lw-seo p { margin: 0 0 .7rem; }
+  .lw-seo ol, .lw-seo ul { margin: 0 0 .7rem; padding-left: 1.25rem; }
+  .lw-seo ol { list-style: decimal; }
+  .lw-seo ul { list-style: disc; }
+  .lw-seo li { margin-bottom: .35rem; }
+  .lw-seo a { color: var(--primary-color, #4285f4); text-decoration: underline; }
+  .lw-seo-inner > h2 { margin-top: 2.25rem; }
+  .lw-seo-inner > h2:first-child { margin-top: 0; }
+  .lw-seo table { border-collapse: collapse; width: 100%; margin: 0 0 .9rem; font-size: 14px; }
+  .lw-seo th, .lw-seo td { border: 1px solid #e3e3e3; padding: .45rem .6rem; text-align: start; vertical-align: top; }
+  .lw-seo th { background: #f3f3f3; font-weight: 600; }
+  .lw-seo .lw-note { font-size: 14px; color: #777; margin-top: 1.75rem; }
+  @media (max-width: 640px) { .lw-seo th, .lw-seo td { padding: .35rem .45rem; overflow-wrap: anywhere; hyphens: auto; } }
+</style>
+<div class="lw-seo">
+ <div class="lw-seo-inner">
+  <h2>Send files to a nearby device, straight from your browser</h2>
+  <p>
+    Snapdrop moves files from one device to another without an app, a cable or an account. Open
+    the page on your phone and your computer: when both are on the same Wi-Fi they show up on each
+    other's screen. Drop a file onto the other device and it goes across directly, browser to
+    browser, at the speed of your local network.
+  </p>
+  <p>
+    The files are not uploaded. They travel over an encrypted peer-to-peer connection, the same
+    WebRTC technology browsers use for video calls. Sharing a link through
+    <a href="https://limewire.com/?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=home&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">LimeWire</a>
+    is still here for people who are not nearby, and it happens only when you press the button.
+  </p>
+
+  <h2>Peer-to-peer Snapdrop is back</h2>
+  <p>
+    If you used Snapdrop years ago, you remember the avatars in a circle and dropping a file onto
+    someone else's. For a while that was replaced by an upload page, and many of you told us it was
+    not what you came for. Direct transfer is back, rebuilt from scratch: devices on one Wi-Fi find
+    each other again, and this time devices on different networks can be linked with a code, so a
+    VPN or mobile data no longer locks you out.
+  </p>
+
+  <h2>Sending a file, step by step</h2>
+  <ul>
+    <li><b>Open Snapdrop on both devices.</b> On the same Wi-Fi they appear on each other's screen within a second or two.</li>
+    <li><b>Not showing up?</b> Press <b>Connect with a code</b> on one device and type the 6 digits on the other, or scan the QR code with the phone camera. The devices stay linked for next time.</li>
+    <li><b>Send.</b> Drop files onto the other device, or click or tap it and pick files.</li>
+    <li><b>Accept.</b> The other device shows who is sending what. After it accepts, the files go across with a progress bar on both screens.</li>
+    <li><b>Save.</b> Received files are saved with one click. Keep both pages open until the transfer finishes.</li>
+  </ul>
+
+  <h2>Direct transfer or a link?</h2>
+  <table>
+    <tr><th></th><th>Direct transfer</th><th>Share link</th></tr>
+    <tr><td>Where the file goes</td><td>straight to the other device</td><td>uploaded to LimeWire</td></tr>
+    <tr><td>Both devices online</td><td>yes, at the same time</td><td>no, the link waits</td></tr>
+    <tr><td>Size</td><td>about 500 MB to a phone, a few GB to a computer</td><td>up to 10 GB without an account</td></tr>
+    <tr><td>How long it lasts</td><td>nothing is stored</td><td>3 days without an account</td></tr>
+    <tr><td>Account</td><td>not needed</td><td>not needed; an account keeps files longer</td></tr>
+  </table>
+  <p>
+    Paid LimeWire plans raise link storage and daily traffic and are listed on the
+    <a href="https://limewire.com/pricing?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=pricing&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">LimeWire pricing page</a>.
+  </p>
+
+  <h2>Is it private?</h2>
+  <p>
+    A direct transfer is encrypted end to end between the two browsers (DTLS, part of WebRTC). Our
+    server only introduces the devices to each other: it sees device names like "Lime Fox" and
+    passes the connection setup between them, but never the files. There is no relay in the
+    middle; if the two devices cannot reach each other directly, Snapdrop says so instead of
+    quietly routing your files elsewhere.
+  </p>
+  <p>
+    A share link works differently: the file is stored by LimeWire and anyone holding the link can
+    open it, so send it only to the person it is meant for. A link made without an account removes
+    itself after three days together with the file.
+  </p>
+
+  <h2>Questions people ask</h2>
+
+  <h3>Do I need an account or an app?</h3>
+  <p>No. Both devices just open snapdrop.net in the browser. An account only matters for share links: a free account raises the limits, and paid plans keep files from expiring.</p>
+
+  <h3>Why can't my devices see each other?</h3>
+  <p>They are probably not on the same network as far as the internet is concerned: a VPN, mobile data, a guest Wi-Fi or an office network separates them. Press <b>Connect with a code</b> on one device and enter the 6 digits on the other. If a direct connection is still impossible, Snapdrop tells you and offers to send a link instead.</p>
+
+  <h3>Are my files uploaded?</h3>
+  <p>Not in a direct transfer: they go from browser to browser over an encrypted connection. Files are uploaded only when you press <b>Share a Link</b> or choose to keep a copy online.</p>
+
+  <h3>How big a file can I send?</h3>
+  <p>Directly, about 500 MB at a time to a phone and a few gigabytes to a computer: the receiving browser has to hold the file in memory. Bigger files are safer as a share link, up to 10 GB without an account and much more on paid plans.</p>
+
+  <h3>Does it work between iPhone and Windows, or Android and Mac?</h3>
+  <p>Yes. Any two devices with a modern browser work together: Safari, Chrome, Edge and Firefox on phones, tablets and computers.</p>
+
+  <h3>Can I send a whole folder?</h3>
+  <p>As a share link, yes: <b>Upload Folder</b> takes the folder as it is. A direct transfer sends files; select the files inside the folder.</p>
+
+  <h3>Do I have to keep the tab open?</h3>
+  <p>Yes, on both devices until a direct transfer finishes. On a phone, keep the screen on and the page in front: a phone browser pauses pages in the background. A share link only needs the tab open while the upload runs.</p>
+
+  <h3>Is Snapdrop an AirDrop alternative?</h3>
+  <p>For moving files between your own devices or to someone in the same room, yes, and it also works across platforms where AirDrop does not: iPhone to Windows, Android to Mac, a Chromebook to anything.</p>
+
+  <h3>Is there an alternative to ToffeeShare?</h3>
+  <p>ToffeeShare streams a file between two open tabs through a link. Snapdrop does the same directly, and devices on one Wi-Fi do not even need a link: they see each other. When the other person cannot be online at the same time, use a share link instead.</p>
+
+  <h3>What can I not send?</h3>
+  <p>Anything illegal where you are, and anything you do not hold the rights to. Files reported for abuse are removed and the link stops working.</p>
+
+  <section class="lw-intent-links">
+  <h2>Pick your two devices</h2>
+  <p>Snapdrop works the same everywhere. These pages walk through the pairs people ask about most.</p>
+  <ul>
+    <li><a href="/airdrop-for-android/">AirDrop on Android: what works instead</a></li>
+    <li><a href="/airdrop-for-windows/">AirDrop to a Windows PC</a></li>
+    <li><a href="/iphone-to-android/">iPhone to Android, and back</a></li>
+    <li><a href="/phone-to-pc/">Phone to laptop or PC without USB</a></li>
+  </ul>
+</section>
+
+  <section class="lw-tools-block">
+  <h2>Fix the file, not just the transfer</h2>
+  <p>A link does its job the moment the other person can actually use what arrives. If the format is wrong or the file is too heavy, fix it first — these tools run in the browser on LimeWire, free and without an account.</p>
+  <ul>
+    <li><a href="https://limewire.com/tools/compress-pdf?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=tools&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">Compress a PDF</a> — smaller file, same document.</li>
+    <li><a href="https://limewire.com/tools/pdf-to-word?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=tools&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">PDF to Word</a> — hand over text the other side can edit.</li>
+    <li><a href="https://limewire.com/tools/excel-to-pdf?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=tools&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">Excel to PDF</a> — a spreadsheet nobody can accidentally change.</li>
+    <li><a href="https://limewire.com/tools/image-to-pdf?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=tools&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">Images to PDF</a> — one document instead of a folder of photos.</li>
+  </ul>
+</section>
+
+  <p class="lw-note">
+    Snapdrop is part of LimeWire.
+    <a href="/blog/">Blog</a> ·
+    <a href="/write-for-us">Write for us</a> ·
+    <a href="https://limewire.com/pricing?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_campaign=pricing&amp;utm_content=/&amp;referrer=tlza455s3j" target="_blank" rel="noopener">Pricing</a> ·
+    <a href="https://limewire.com/support?site=snapdrop_net" target="_blank" rel="noopener noreferrer">Support</a>
+  </p>
+ </div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://snapdrop.net/#faq",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need an account or an app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Both devices just open snapdrop.net in the browser. An account only matters for share links: a free account raises the limits, and paid plans keep files from expiring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't my devices see each other?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are probably not on the same network as far as the internet is concerned: a VPN, mobile data, a guest Wi-Fi or an office network separates them. Press Connect with a code on one device and enter the 6 digits on the other. If a direct connection is still impossible, Snapdrop tells you and offers to send a link instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my files uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in a direct transfer: they go from browser to browser over an encrypted connection. Files are uploaded only when you press Share a Link or choose to keep a copy online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How big a file can I send?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Directly, about 500 MB at a time to a phone and a few gigabytes to a computer: the receiving browser has to hold the file in memory. Bigger files are safer as a share link, up to 10 GB without an account and much more on paid plans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work between iPhone and Windows, or Android and Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Any two devices with a modern browser work together: Safari, Chrome, Edge and Firefox on phones, tablets and computers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I send a whole folder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a share link, yes: Upload Folder takes the folder as it is. A direct transfer sends files; select the files inside the folder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to keep the tab open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on both devices until a direct transfer finishes. On a phone, keep the screen on and the page in front: a phone browser pauses pages in the background. A share link only needs the tab open while the upload runs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Snapdrop an AirDrop alternative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For moving files between your own devices or to someone in the same room, yes, and it also works across platforms where AirDrop does not: iPhone to Windows, Android to Mac, a Chromebook to anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an alternative to ToffeeShare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ToffeeShare streams a file between two open tabs through a link. Snapdrop does the same directly, and devices on one Wi-Fi do not even need a link: they see each other. When the other person cannot be online at the same time, use a share link instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can I not send?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anything illegal where you are, and anything you do not hold the rights to. Files reported for abuse are removed and the link stops working."
+      }
+    }
+  ]
+}
+</script>
+
+<x-dialog id="receiveDialog">
+  <x-background class="full center">
+    <x-paper shadow="2">
+      <h3>File Received</h3>
+      <div class="font-subheading" id="fileName">Filename</div>
+      <div class="font-body2" id="fileSize"></div>
+      <div class='preview' style="visibility: hidden;"> <img id='img-preview' src="" alt=""> </div>
+      <div class="row">
+        <label for="autoDownload" class="grow">Ask to save each file before downloading</label>
+        <input type="checkbox" id="autoDownload" checked="">
+      </div>
+      <div class="row-reverse"> <a class="button" close id="download" title="Download File" autofocus>Save</a>
+        <button class="button" close>Ignore</button>
+      </div>
+    </x-paper>
+  </x-background>
+</x-dialog>
+<x-dialog id="sendTextDialog">
+  <form action="#">
+    <x-background class="full center">
+      <x-paper shadow="2">
+        <h3>Send a Message</h3>
+        <div id="textInput" class="textarea" role="textbox" placeholder="Send a message" autocomplete="off" autofocus contenteditable></div>
+        <div class="row-reverse">
+          <button class="button" type="submit" close>Send</button>
+          <a class="button" close>Cancel</a> </div>
+      </x-paper>
+    </x-background>
+  </form>
+</x-dialog>
+<x-dialog id="receiveTextDialog">
+  <x-background class="full center">
+    <x-paper shadow="2">
+      <h3>Message Received</h3>
+      <div class="font-subheading" id="text"></div>
+      <div class="row-reverse">
+        <button class="button" id="copy" close autofocus>Copy</button>
+        <button class="button" close>Close</button>
+      </div>
+    </x-paper>
+  </x-background>
+</x-dialog>
+<div class="toast-container full center">
+  <x-toast class="row" shadow="1" id="toast">File Transfer Completed</x-toast>
+</div>
+<x-about id="about" class="full center column">
+  <section class="center column fade-in">
+    <header class="row-reverse"> <a href="#" class="close icon-button">
+      <svg class="icon">
+        <use xlink:href="#close" />
+      </svg>
+      </a> </header>
+    <svg class="icon logo">
+      <use xlink:href="#wifi-tethering" />
+    </svg>
+    <h1>Snapdrop</h1>
+    <div class="font-subheading">The easiest way to transfer files across devices</div>
+    <div class="row"> <a class="icon-button" target="_blank" href="https://x.com/limewire" title="Snapdrop on Twitter" rel="noreferrer">
+      <svg class="icon">
+        <use xlink:href="#twitter" />
+      </svg>
+      </a> <a class="icon-button" target="_blank" href="https://limewire.com/?utm_source=snapdrop.net&amp;utm_medium=satellite&amp;utm_content=faq&amp;utm_campaign=home&amp;referrer=tlza455s3j" title="Frequently asked questions" rel="noreferrer noopener">
+      <svg class="icon">
+        <use xlink:href="#help-outline" />
+      </svg>
+      </a> </div>
+  </section>
+  <x-background></x-background>
+</x-about>
+<svg style="display: none;">
+  <symbol id=wifi-tethering viewBox="0 0 24 24">
+    <path d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 2c0-3.31-2.69-6-6-6s-6 2.69-6 6c0 2.22 1.21 4.15 3 5.19l1-1.74c-1.19-.7-2-1.97-2-3.45 0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.48-.81 2.75-2 3.45l1 1.74c1.79-1.04 3-2.97 3-5.19zM12 3C6.48 3 2 7.48 2 13c0 3.7 2.01 6.92 4.99 8.65l1-1.73C5.61 18.53 4 15.96 4 13c0-4.42 3.58-8 8-8s8 3.58 8 8c0 2.96-1.61 5.53-4 6.92l1 1.73c2.99-1.73 5-4.95 5-8.65 0-5.52-4.48-10-10-10z"></path>
+  </symbol>
+  <symbol id=desktop-mac viewBox="0 0 24 24">
+    <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"></path>
+  </symbol>
+  <symbol id=phone-iphone viewBox="0 0 24 24">
+    <path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"></path>
+  </symbol>
+  <symbol id=tablet-mac viewBox="0 0 24 24">
+    <path d="M18.5 0h-14C3.12 0 2 1.12 2 2.5v19C2 22.88 3.12 24 4.5 24h14c1.38 0 2.5-1.12 2.5-2.5v-19C21 1.12 19.88 0 18.5 0zm-7 23c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm7.5-4H4V3h15v16z"></path>
+  </symbol>
+  <symbol id=info-outline viewBox="0 0 24 24">
+    <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"></path>
+  </symbol>
+  <symbol id=close viewBox="0 0 24 24">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+  </symbol>
+  <symbol id=help-outline viewBox="0 0 24 24">
+    <path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path>
+  </symbol>
+  <symbol id="twitter">
+    <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
+  </symbol>
+  <symbol id="github">
+    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+  </symbol>
+  <g id="notifications">
+    <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+  </g>
+  <symbol id="homescreen">
+    <path fill="none" d="M0 0h24v24H0V0z" />
+    <path d="M18 1.01L8 1c-1.1 0-2 .9-2 2v3h2V5h10v14H8v-1H6v3c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM10 15h2V8H5v2h3.59L3 15.59 4.41 17 10 11.41z" />
+    <path fill="none" d="M0 0h24v24H0V0z" />
+  </symbol>
+  <symbol id="monetarization">
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z" />
+  </symbol>
+</svg>
+<script src="scripts/network.js?v=f069cb0c5c"></script>
+
+<audio id="blop" preload="auto">
+  <source src="sounds/blop.mp3" type="audio/mpeg">
+  <source src="sounds/blop.ogg" type="audio/ogg">
+</audio>
+
+<noscript>
+<x-noscript class="full center column">
+  <h2>Enable JavaScript</h2>
+  <h3>Snapdrop works only with JavaScript</h3>
+</x-noscript>
+<style>
+x-noscript {
+            background: #599cfc;
+            color: white;
+            z-index: 2;
+        }
+
+        a[href="#info"] {
+            color: white;
+        }
+        </style>
+</noscript>
+
+<script src="/js/lw_lang_picker.js?v=777319d23e" defer></script>
+</body>
