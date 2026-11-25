@@ -281,7 +281,40 @@ const lwEnv = ['dev', 'stage'].find((e) => e === new URLSearchParams(window.loca
 const lwAppBaseUrl = isStaging ? `https://${lwEnv}.bluegreenenv.com` : 'https://limewire.com';
 const lwApiBaseUrl = isStaging ? `https://api-${lwEnv}.bluegreenenv.com` : 'https://api.limewire.com';
 const libUrl = `${lwAppBaseUrl}/file-sharing-lib/file-sharing-lib.es.js`;
-const fileSharingLib = await import(libUrl);
+ 
+
+
+
+
+const lwEarly = { input: null, files: null, error: null };
+const lwEarlyInputs = ['#select-files-input', '#upload-folder'].map((s) => document.querySelector(s)).filter(Boolean);
+const lwEarlyZone = document.querySelector('#upload-drag-drop');
+
+
+const lwEarlyLibFailed = () => lwShowUploadFailure({ stage: 'library', result: { ok: false, error: { code: 'library_load', message: '' } } });
+const lwEarlyHold = () => {
+  if (lwEarly.error) { lwEarlyLibFailed(); return; }
+  $('body').find('.lw_modal').addClass('initializing').fadeIn();
+};
+const lwEarlyChange = (event) => { lwEarly.input = event.target; lwEarly.files = null; lwEarlyHold(); };
+const lwEarlyOver = (event) => { event.preventDefault(); };
+const lwEarlyDrop = (event) => {
+  event.preventDefault();
+  const files = Array.from((event.dataTransfer && event.dataTransfer.files) || []);
+  if (!files.length) { return; }
+  lwEarly.files = files; lwEarly.input = null; lwEarlyHold();
+};
+lwEarlyInputs.forEach((input) => input.addEventListener('change', lwEarlyChange));
+if (lwEarlyZone) { lwEarlyZone.addEventListener('dragover', lwEarlyOver); lwEarlyZone.addEventListener('drop', lwEarlyDrop); }
+let fileSharingLib;
+try {
+  fileSharingLib = await import(libUrl);
+} catch (error) {
+  lwEarly.error = error || new Error('library_load');
+  if (lwEarly.input || lwEarly.files) { lwEarlyLibFailed(); }
+  throw error;
+}
+ 
 
 window.fileSharingLib = fileSharingLib;
 
@@ -764,3 +797,23 @@ var array = [
     startReported = false;
   });
 })();
+
+ 
+(() => {
+  lwEarlyInputs.forEach((input) => input.removeEventListener('change', lwEarlyChange));
+  if (lwEarlyZone) { lwEarlyZone.removeEventListener('dragover', lwEarlyOver); lwEarlyZone.removeEventListener('drop', lwEarlyDrop); }
+  if (lwEarly.input && lwEarly.input.files && lwEarly.input.files.length) {
+    lwEarly.input.dispatchEvent(new Event('change'));
+  } else if (lwEarly.files) {
+    try {
+      const transfer = new DataTransfer();
+      lwEarly.files.forEach((file) => transfer.items.add(file));
+      uploadFilesInput.files = transfer.files;
+      uploadFilesInput.dispatchEvent(new Event('change'));
+    } catch (e) {
+      
+      if (sharingBucketUpload.canUploadAllFiles(lwEarly.files)) { sharingBucketUpload.addEntries(lwEarly.files); }
+    }
+  }
+})();
+ 
