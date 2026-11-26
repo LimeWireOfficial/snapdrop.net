@@ -286,12 +286,14 @@ const libUrl = `${lwAppBaseUrl}/file-sharing-lib/file-sharing-lib.es.js`;
 
 
 
-const lwEarly = { input: null, files: null, error: null };
+const lwEarly = { input: null, files: null, error: null, code: null };
 const lwEarlyInputs = ['#select-files-input', '#upload-folder'].map((s) => document.querySelector(s)).filter(Boolean);
 const lwEarlyZone = document.querySelector('#upload-drag-drop');
 
 
-const lwEarlyLibFailed = () => lwShowUploadFailure({ stage: 'library', result: { ok: false, error: { code: 'library_load', message: '' } } });
+
+
+const lwEarlyLibFailed = () => lwShowUploadFailure({ stage: 'library', result: { ok: false, error: { code: lwEarly.code || 'library_load', message: '' } } });
 const lwEarlyHold = () => {
   if (lwEarly.error) { lwEarlyLibFailed(); return; }
   $('body').find('.lw_modal').addClass('initializing').fadeIn();
@@ -307,8 +309,27 @@ const lwEarlyDrop = (event) => {
 lwEarlyInputs.forEach((input) => input.addEventListener('change', lwEarlyChange));
 if (lwEarlyZone) { lwEarlyZone.addEventListener('dragover', lwEarlyOver); lwEarlyZone.addEventListener('drop', lwEarlyDrop); }
 let fileSharingLib;
+
+const lwHostAnswers = () => Promise.race([
+  fetch(`${lwAppBaseUrl}/robots.txt`, { mode: 'no-cors', cache: 'no-store' }).then(() => true, () => false),
+  new Promise((resolve) => { setTimeout(() => resolve(false), 5000); }),
+]);
+const lwImportLib = async () => {
+  try {
+    return await import(libUrl);
+  } catch (first) {
+    
+    await new Promise((resolve) => { setTimeout(resolve, 1500); });
+    try {
+      return await import(`${libUrl}?retry=1`);
+    } catch (second) {
+      lwEarly.code = (await lwHostAnswers()) ? 'library_load' : 'library_unreachable';
+      throw second;
+    }
+  }
+};
 try {
-  fileSharingLib = await import(libUrl);
+  fileSharingLib = await lwImportLib();
 } catch (error) {
   lwEarly.error = error || new Error('library_load');
   if (lwEarly.input || lwEarly.files) { lwEarlyLibFailed(); }
